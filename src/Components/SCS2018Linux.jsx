@@ -9,6 +9,6 @@ export default function AltairContent() {
         {/*更新日志*/}
         <VersionDescription></VersionDescription>
         <Title level={2} id="1 平台基础架构">1 平台基础架构</Title>
-        <Paragraph> </Paragraph>
+        <Paragraph> test</Paragraph>
     </div>
 }
