@@ -7,12 +7,12 @@ export default class AltairBreadcrumb extends React.Component {
     }
 
     render() {
-        return <diV>
-            <Breadcrumb style={{ margin: '16px 48px' }}>
+        return <div>
+            <Breadcrumb style={{ margin: '25px 0 -100px 50px' }}>
                 <Breadcrumb.Item>SCS安装手册</Breadcrumb.Item>
-                <Breadcrumb.Item>SCS</Breadcrumb.Item>
+                <Breadcrumb.Item>SCS2019</Breadcrumb.Item>
                 <Breadcrumb.Item>Linux环境</Breadcrumb.Item>
             </Breadcrumb>
-        </diV>
+        </div>
     }
 }

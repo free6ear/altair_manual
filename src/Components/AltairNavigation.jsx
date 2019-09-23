@@ -10,7 +10,7 @@ export default class Navigation extends React.Component {
     }
 
     state = {
-        current: 'SCS2018/2017:1'
+        current: 'SCS2019:1'
     }
 
     handleClick  = e => {
@@ -70,10 +70,36 @@ export default class Navigation extends React.Component {
                         <Menu.Item key="setting:9">SM功能</Menu.Item>
                         <Menu.Item key="setting:10">Linux下安装HyperWorks</Menu.Item>
                     </SubMenu>
+                    <SubMenu
+                        title={
+                            <span className="submenu-title-wrapper">
+                                <Icon type="container" />
+                                相关技术文档
+                            </span>
+                        }
+                    >
+                        <Menu.Item key="otherfile:1">流程模板制作</Menu.Item>
+                        <Menu.Item key="otherfile:2">loadcase制作</Menu.Item>
+                        <Menu.Item key="otherfile:3">classification制作</Menu.Item>
+                    </SubMenu>
                     <Menu.Item key="faq">
                         <Icon type="issues-close" /> 
                         FAQ
                     </Menu.Item>
+                    
+                    <SubMenu
+                        title={
+                            <span className="submenu-title-wrapper">
+                                <Icon type="appstore" />
+                                常用链接
+                            </span>
+                        }
+                    >
+                        <Menu.Item key="commonlink:1">项目文档</Menu.Item>
+                        <Menu.Item key="commonlink:2">NAS服务器</Menu.Item>
+                        <Menu.Item key="commonlink:3">大文件发送</Menu.Item>
+                    </SubMenu>
+                    
                 </Menu>
             </div>
         )

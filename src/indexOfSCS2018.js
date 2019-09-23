@@ -6,7 +6,7 @@ import SCS2019LinuxSider from './Components/SCS2019LinuxSider';
 import SCS2019Linux from './Components/SCS2019Linux';
 import AltairBreadcrumb from './Components/AltairBreadcrumb'
 
-import {  Anchor, Layout, Menu, Affix,Icon, Divider, Tag, Table, Typography, Radio, Steps, BackTop, Button, Input, Tooltip, Dropdown } from 'antd';
+import {  Anchor, Layout, Menu, Icon, Divider, Tag, Table, Typography, Radio, Steps, BackTop, Button, Input, Tooltip, Dropdown } from 'antd';
 
 import main_logo from './img/altair_logo.svg';
 
@@ -19,22 +19,20 @@ const { Search } = Input;
 
 ReactDOM.render(
   <Layout>
-    <Header className="header" style={{ width: '100%', height: "64px" }}>
+    <Header className="header" >
       <div className="main_logo">
-        <a href="https://www.altair.com.cn">
-          <img src={main_logo} style={{   
-            width: "120px",
-            height: "31px",
-            margin: "16px 28px 16px 0",
-            float: "left",
-            }}
-          />
-        </a>
+        <img src={main_logo} style={{   
+          width: "120px",
+          height: "31px",
+          margin: "16px 28px 16px 0",
+          float: "left",
+          }}
+        />
       </div>
       <Navigation></Navigation>
     </Header>
     <AltairBreadcrumb></AltairBreadcrumb>
-    <Content style={{ padding: '0 50px', marginTop: "64px" }}>
+    <Content style={{ padding: '0 50px' }}>
       <Layout style={{ padding: '24px 0', background: '#fff', margin: "5px 0" }}>
         <SCS2019LinuxSider></SCS2019LinuxSider>
         <Content style={{ padding: '0  30px', minHeight: 280 }}> 
