@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom'
 
 import Navigation from './Components/AltairNavigation';
 import SCS2019LinuxSider from './Components/SCS2019LinuxSider';
 import SCS2019Linux from './Components/SCS2019Linux';
-import AltairBreadcrumb from './Components/AltairBreadcrumb'
+import AltairBreadcrumb from './Components/AltairBreadcrumb';
+import PatacModal from './Components/PatacModal';
 
 import {  Anchor, Layout, Menu, Affix,Icon, Divider, Tag, Table, Typography, Radio, Steps, BackTop, Button, Input, Tooltip, Dropdown } from 'antd';
 
@@ -20,17 +21,18 @@ const { Search } = Input;
 ReactDOM.render(
   <Layout>
     <Header className="header" style={{ width: '100%', height: "64px" }}>
-      <div className="main_logo">
-        <a href="https://www.altair.com.cn">
-          <img src={main_logo} style={{   
-            width: "120px",
-            height: "31px",
-            margin: "16px 28px 16px 0",
-            float: "left",
-            }}
-          />
-        </a>
-      </div>
+      <a onClick={PatacModal.showModal}>
+        <div className="main_logo">
+            <img src={main_logo} style={{   
+              width: "120px",
+              height: "31px",
+              margin: "16px 28px 16px 0",
+              float: "left",
+              }}
+            />
+        </div>
+      </a>
+      <PatacModal></PatacModal>
       <Navigation></Navigation>
     </Header>
     <AltairBreadcrumb></AltairBreadcrumb>

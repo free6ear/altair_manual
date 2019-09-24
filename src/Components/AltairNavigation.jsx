@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { Menu, Icon } from 'antd';
-
 const { SubMenu } = Menu;
 
 export default class Navigation extends React.Component {
@@ -59,7 +57,6 @@ export default class Navigation extends React.Component {
                             </span>
                         }
                     >
-                        <Menu.Item key="setting:1">License Server及License部署</Menu.Item>
                         <Menu.Item key="setting:2">PBS集成</Menu.Item>
                         <Menu.Item key="setting:3">同步PBS用户</Menu.Item>
                         <Menu.Item key="setting:3">Samba与ALF</Menu.Item>
@@ -67,7 +64,7 @@ export default class Navigation extends React.Component {
                         <Menu.Item key="setting:6">OpenOffice</Menu.Item>
                         <Menu.Item key="setting:7">SM功能</Menu.Item>
                         <Menu.Item key="setting:8">AMS三员功能及登录认证</Menu.Item>
-                        <Menu.Item key="setting:9">SM功能</Menu.Item>
+                        <Menu.Item key="setting:9">License Server及License部署</Menu.Item>
                         <Menu.Item key="setting:10">Linux下安装HyperWorks</Menu.Item>
                     </SubMenu>
                     <SubMenu
@@ -81,6 +78,7 @@ export default class Navigation extends React.Component {
                         <Menu.Item key="otherfile:1">流程模板制作</Menu.Item>
                         <Menu.Item key="otherfile:2">loadcase制作</Menu.Item>
                         <Menu.Item key="otherfile:3">classification制作</Menu.Item>
+                        <Menu.Item key="otherfile:4">常用配置文件路径表</Menu.Item>
                     </SubMenu>
                     <Menu.Item key="faq">
                         <Icon type="issues-close" /> 
