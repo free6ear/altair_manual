@@ -21,7 +21,8 @@ const stepStyle = {
         lineNumbers: false,                     //显示行号  
         mode: {name: "text/x-mysql"},          //定义mode  
         extraKeys: {},   //自动提示配置  
-        theme: "darcula"                  //选中的theme  
+        theme: "darcula" ,                 //选中的theme 
+        height: "auto"
       };
 
 export default class SCS2019Linux extends React.Component {
@@ -48,7 +49,7 @@ export default class SCS2019Linux extends React.Component {
                 <Step status="wait" title="安装SCS" />
                 <Step status="wait" title="安装RVS" />
             </Steps>
-            <Title level={4}>1.1. 检查关闭SELinux</Title>
+            <Title level={4} id="检查关闭SELinux">1.1. 检查关闭SELinux</Title>
             <Paragraph style={{ marginLeft: "40px"}}>
                 修改<Text strong>/etc/selinux/config</Text>文件：
             </Paragraph>
@@ -73,7 +74,7 @@ export default class SCS2019Linux extends React.Component {
             </Paragraph>
             <Paragraph>
             </Paragraph>
-            <div style={{ width: "800px",  marginLeft: "40px", lineHeight: "200%" }}>
+            <div style={{  maxWidth: "925px", marginLeft: "40px", lineHeight: "200%" }}>
                 <CodeMirror 
                     ref="editor" 
                     value=" DEVICE=eth0(默认)
@@ -89,6 +90,7 @@ export default class SCS2019Linux extends React.Component {
                     IPADDR=192.168.164.100(新添加,具体ip地址根据实际情况修改)
                     NETMASK=255.255.255.0(新添加)"  
                     options={options}
+                    style={{ height: "300px" }}
                 ></CodeMirror>
                 </div>
             <br/>
@@ -98,7 +100,7 @@ export default class SCS2019Linux extends React.Component {
                 &nbsp;&nbsp;&nbsp;&nbsp;<Tag>vim /etc/hosts</Tag><br/>
                 按照下列方式修改:
             </Paragraph>
-            <div style={{ maxWidth: "925px",  margin: "0 auto", lineHeight: "200%" }}>
+            <div style={{ maxWidth: "925px",  marginLeft: "40px", lineHeight: "200%" }}>
                 <CodeMirror 
                     ref="editor" 
                     value=" 127.0.0.1   localhost localhost.localdomain localhost4
@@ -189,7 +191,7 @@ export default class SCS2019Linux extends React.Component {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行&nbsp;<Tag>psql postgres</Tag><br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行下列语句：
             </Paragraph>
-            <div style={{ maxWidth: "925px",  margin: "0 auto", lineHeight: "200%" }}>
+            <div style={{ maxWidth: "925px",  marginLeft: "40px", lineHeight: "200%" }}>
                 <CodeMirror 
                     ref="editor" 
                     value=" create user hweuser with LOGIN SUPERUSER CREATEDB CREATEROLE INHERIT REPLICATION CONNECTION LIMIT -1 PASSWORD 'hwe_123';
@@ -228,9 +230,8 @@ export default class SCS2019Linux extends React.Component {
             </Steps>
             <Paragraph style={{ lineHeight: "300%" }}>
                 <Text strong>Setp 1 ：（1）	添加pbsadmin用户，并设置指定密码为”1qaz2wsx”</Text><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行&nbsp;<Tag>vim /var/lib/pgsql/10/data/postgresql.conf</Tag> 修改如下属性值：<br/>
-                <Text mark style={{ marginLeft: "60px", lineHeight: "200%" }}>useradd pbsadmin</Text><br/>
-                <Text mark style={{ marginLeft: "60px", lineHeight: "200%" }}>passwd pbsadmin</Text><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行&nbsp;<Tag>useradd pbsadmin</Tag><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行&nbsp;<Tag>passwd pbsadmin</Tag><br/>
             </Paragraph>
             <Paragraph style={{ lineHeight: "300%" }}>
                 <Text strong>Setp 2 ：执行安装程序</Text><br/>

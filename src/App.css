@@ -31,6 +31,16 @@
   margin: 16px 28px 16px 0;
   float: left;
 }
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}
+
+.CodeMirror-scroll {
+  height: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
 
 @keyframes App-logo-spin {
   from {

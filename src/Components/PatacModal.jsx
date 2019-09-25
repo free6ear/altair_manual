@@ -29,12 +29,10 @@ export default class PatacModal extends React.Component {
     };
 
     render() {
-        return <div>
-            <Modal
+        return <Modal
                 visiable={this.state.visiable}
             >
                 ...
             </Modal>
-        </div>
     }
 }

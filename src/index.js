@@ -21,8 +21,8 @@ const { Search } = Input;
 ReactDOM.render(
   <Layout>
     <Header className="header" style={{ width: '100%', height: "64px" }}>
-      <a onClick={PatacModal.showModal}>
-        <div className="main_logo">
+      <a >
+        <div className="main_logo" onClick={PatacModal.showModal}>
             <img src={main_logo} style={{   
               width: "120px",
               height: "31px",
@@ -32,18 +32,19 @@ ReactDOM.render(
             />
         </div>
       </a>
-      <PatacModal></PatacModal>
       <Navigation></Navigation>
     </Header>
     <AltairBreadcrumb></AltairBreadcrumb>
-    <Content style={{ padding: '0 50px', marginTop: "64px" }}>
+    <Content style={{ padding: '0 0px', marginTop: "64px" }}>
       <Layout style={{ padding: '24px 0', background: '#fff', margin: "5px 0" }}>
         <SCS2019LinuxSider></SCS2019LinuxSider>
         <Content style={{ padding: '0  30px', minHeight: 280 }}> 
           {/*正文*/}
+          <PatacModal></PatacModal>
           <SCS2019Linux></SCS2019Linux>
         </Content>
       </Layout>
+      <Divider type="vertical" />
     </Content>
     <BackTop style={{ color: "#1088e9" }} /> 
     <Footer style={{ textAlign: 'center' }}>Altair ©2019 Created by Meng Sun.</Footer>
